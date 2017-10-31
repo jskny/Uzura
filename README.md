@@ -2,7 +2,7 @@
 
 I made it when I was a highschool student ( 2013 ).
 It has many functions.
-Now, I don't understand perfectly...
+Now, I don't memorize it how it work...
 
 I leave it here as past heritage.
 
