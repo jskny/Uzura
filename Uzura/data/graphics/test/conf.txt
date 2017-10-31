@@ -1,0 +1,13 @@
+// 画像の分割設定。
+
+
+numG = 4;
+numGx = 4;
+numGy = 1;
+imageOneW = 64;
+imageOneH = 64;
+size = 256;
+
+
+END;
+

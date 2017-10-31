@@ -1,0 +1,53 @@
+﻿startup.lua に於いて、
+
+AddListener("test", Listener)
+DelListener("test", Listener)
+DelListener("test", Listener)
+
+
+上記のように一度追加してそれを追加した量以上デリートすると、
+エラー発生
+
+
+script error './data/script/startup.lua' >> attempt to compare two function values
+reload ? (y/n) >
+
+
+で、
+scripting.cpp の DelListener 関数に二行の追加で治る。
+	// あったら殺せ。
+	bool ret = false;
+	auto vec = g_mapLuaScriptListener[hash];
+	for (auto itr = vec.begin(); itr != vec.end(); ++itr) {
+		if ((*itr) == obj) {
+			// 抹消じゃー
+			vec.erase(itr);
+			ret = true;
+			break;
+		}
+
+	}
+
+
+!!!!!!!!// ↓これを追加。!!!!!!!!
+	if (!ret) {
+		return (false);
+	}
+!!!!!!!!// ↑これを追加。!!!!!!!!
+
+
+	// コピー戻して完了。
+	// ついでにソートしておく・・・深い意味はない。
+	std::sort(vec.begin(), vec.end());
+	g_mapLuaScriptListener[hash] = vec;
+
+
+	if (vec.empty()) {
+		// マネージャーから切り離す。
+		g_uzura->getManagerEvent()->delListener(g_eventListener, hash);
+	}
+
+
+
+以上の修正で何故か治った。
+

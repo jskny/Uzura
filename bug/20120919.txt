@@ -1,0 +1,34 @@
+﻿以下のコードにおいて、
+3D モデルの座標が 0, 0, 0 固定？
+となり、カメラの影響を受けなくなる・・・
+
+
+解決、
+SetDrawScreen の仕様で、
+SetDrawScreen が呼ばれると、 DxLib のカメラ関数でセットしたもの、
+が初期化されていた。
+
+
+
+-- 画面の出力
+function Draw()
+--	SetDrawScreen(g_handleScreen)
+	-- 裏画面に出力
+--	SetDrawScreen(DX_SCREEN_BACK)
+	DrawGraph(0, 0, g_handleScreen, TRUE)
+
+end
+
+
+-- アップデートイベントで呼ばれる。
+function ListenerDraw()
+	Draw()
+
+
+	--タスクシステムファイヤー
+	TaskDraw()
+
+
+	return true
+end
+

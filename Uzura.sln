@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Uzura", "Uzura\Uzura.vcxproj", "{F21642E2-2B6C-48E4-B315-CE523225D9A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtomEngine", "..\..\..\AtomEngine\trunk\AtomEngine\AtomEngine\AtomEngine.vcxproj", "{53D973CF-3A38-4882-935D-5C45CF9D7836}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F21642E2-2B6C-48E4-B315-CE523225D9A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F21642E2-2B6C-48E4-B315-CE523225D9A9}.Debug|Win32.Build.0 = Debug|Win32
+		{F21642E2-2B6C-48E4-B315-CE523225D9A9}.Release|Win32.ActiveCfg = Release|Win32
+		{F21642E2-2B6C-48E4-B315-CE523225D9A9}.Release|Win32.Build.0 = Release|Win32
+		{53D973CF-3A38-4882-935D-5C45CF9D7836}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53D973CF-3A38-4882-935D-5C45CF9D7836}.Debug|Win32.Build.0 = Debug|Win32
+		{53D973CF-3A38-4882-935D-5C45CF9D7836}.Release|Win32.ActiveCfg = Release|Win32
+		{53D973CF-3A38-4882-935D-5C45CF9D7836}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

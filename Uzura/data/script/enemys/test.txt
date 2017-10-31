@@ -1,0 +1,28 @@
+// 敵キャラ操作ー
+// 2012 / 11 / 01
+// jskny
+
+
+LABEL	labelMain;
+// $x = $x + 1;
+$z = $z - 3;
+
+
+$counter = $counter + 1;
+
+
+IF (($counter % 20) == 0)
+	// 追跡
+	// 弾の速度, Z座標に足す速度。
+	CALL ShotBullet($cx, $cy, $cz, "Homing", "0002", 50);
+ENDIF;
+
+
+// パーサーに一時停止を通知する。
+CALL parser_break();
+
+
+GOTO labelMain;
+
+END;
+

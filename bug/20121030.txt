@@ -1,0 +1,120 @@
+﻿/*
+// VFX エンジン「あまゆり」を使います。
+#include	"Amayuri.h"
+#ifdef _DEBUG
+#pragma comment ( lib, "AmayuriD.lib" )
+#else//_DEBUG
+#pragma comment ( lib, "Amayuri.lib" )
+#endif//_DEBUG*/
+
+
+/*
+// あまゆりの初期化
+// デバイスロスト対策 ----------------------------------------------------------------------------------------
+void OnDeviceLost( void* )
+{
+	// デバイスロスト処理
+	RVFX_OnLostDevice();
+}
+
+// デバイスロスト対策 ----------------------------------------------------------------------------------------
+void OnDeviceRestore( void* )
+{
+	// デバイスリストア処理
+	RVFX_OnResetDevice();
+}
+
+
+RVFX_DATA		rData;	// あまゆり用データ
+RVFX_INSTANCE	rInst;	// あまゆり用データのインスタンス
+
+
+// あまゆりの初期化処理
+bool InitAmayuri(void)
+{
+	// デバイスロスト用の追加関数
+	SetGraphicsDeviceLostCallbackFunction( OnDeviceLost, NULL );
+	SetGraphicsDeviceRestoreCallbackFunction( OnDeviceRestore, NULL );
+
+
+	// あまゆりの初期化
+	if (!RVFX_Initialize(
+			(IDirect3DDevice9*)GetUseDirect3DDevice9(),	// IDirect3DDevice9
+			65010,	// ツール接続用ポート
+			128,	// 最大オブジェクト数
+			1024,	// 最大インスタンス数
+			true )) {
+		return (false);
+	}
+
+
+	// あまゆりのファイル読み込み
+	rData = RVFX_CreateData_FromFile( "./data/vfx_file/explosion.win.rbin" );
+	// あまゆりのデータからインスタンスを作成
+	rInst = RVFX_CreateInstance( rData );
+	// 再生開始
+	RVFX_Play(
+		rInst,		// 対象のインスタンス
+		1.0f,		// 再生速度
+		true );		// ループのON/OFF
+
+	return (true);
+}
+
+
+// あまゆりの終了処理
+bool FinalizeAmayuri(void)
+{
+	// あまゆりのデータとインスタンス削除
+	RVFX_DeleteInstance( rInst );
+	RVFX_DeleteData( rData );
+
+
+	RVFX_Unitialize();
+	return (true);
+}
+
+
+// あまゆりの更新処理
+void UpdateAmayuri(void)
+{
+	MATRIX tM = g_uzura->getCameraMatrix();
+// フレームの開始宣言
+	RVFX_Begin(
+		1.0f,												// 更新時間
+		(const D3DXMATRIX*)&tM,			// ビュー行列
+		(const D3DXMATRIX*)&tM);	// プロジェクション行列
+
+	// 更新処理
+	{
+		// フレーム更新
+		RVFX_Update();
+	}
+
+	// 描画処理
+	{
+		// 描画開始
+		MATRIX tmp = GetPlayerRayMatrix();
+		D3DXVECTOR3 SceneLightDirection(tmp.m[3][0], tmp.m[3][1], tmp.m[3][2]);
+		D3DXVECTOR3 SceneLightColor( 1.0f, 1.0f, 1.0f );
+		RVFX_DrawBegin( &SceneLightDirection, &SceneLightColor );
+
+		// パス毎の描画
+		for ( int i = 0; i < DrawPass_MaxOf; ++i )
+		{
+			RVFX_Draw( (eDrawPass)i );
+		}
+
+
+		// デバッグ表示
+		// RVFX_Draw_Debug();
+		// 描画終了
+		RVFX_DrawEnd();
+	}
+
+
+	// フレームの終了宣言
+	RVFX_End();
+}
+*/
+

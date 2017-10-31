@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Uzura">
+      <UniqueIdentifier>{ba9454f4-a1e0-4a63-a6db-0ba0e1f13f19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\sequence">
+      <UniqueIdentifier>{16c8dfed-54b4-4e7e-a4ef-9a86076b3f2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\sequence\title">
+      <UniqueIdentifier>{41a797dd-ffd4-4292-b4de-f3f137dc6e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\sequence\main">
+      <UniqueIdentifier>{0dc18296-f9b9-4ecb-a834-1a6782e9d958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\scripting">
+      <UniqueIdentifier>{25a65c9b-3122-400a-a9f7-da015d80eb78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\stage">
+      <UniqueIdentifier>{8e37300e-9437-4299-a5fa-d60a69889775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\input">
+      <UniqueIdentifier>{ce05adc4-df88-4f85-8405-790c902b231f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\actor">
+      <UniqueIdentifier>{58214676-bd46-4883-a396-93cb6bfe8f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\process">
+      <UniqueIdentifier>{d58c2d87-f7f3-4a13-a642-96e9423b39cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\process\player">
+      <UniqueIdentifier>{aca2b67b-0de5-46ce-bc32-7f0633945ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\process\bullet">
+      <UniqueIdentifier>{febf2cc5-0e76-4803-a01a-bbb15af7ac19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\process\enemy">
+      <UniqueIdentifier>{323c1fd0-aa88-470b-88cd-162420aac19a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\gscripter">
+      <UniqueIdentifier>{87ad48b2-4597-452a-8c66-1520bd143650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\collision">
+      <UniqueIdentifier>{37d002b6-7d6b-4c98-8e62-c5b47e454f05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\effect">
+      <UniqueIdentifier>{975c2c63-dfda-439c-83ef-05913f87a563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uzura\shell">
+      <UniqueIdentifier>{a8eac48b-b7cf-47f0-9d95-b5502a36e221}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Uzura</Filter>
+    </ClCompile>
+    <ClCompile Include="uzura.cpp">
+      <Filter>Uzura</Filter>
+    </ClCompile>
+    <ClCompile Include="g_title.cpp">
+      <Filter>Uzura\sequence\title</Filter>
+    </ClCompile>
+    <ClCompile Include="g_main.cpp">
+      <Filter>Uzura\sequence\main</Filter>
+    </ClCompile>
+    <ClCompile Include="scripting.cpp">
+      <Filter>Uzura\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="stage.cpp">
+      <Filter>Uzura\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Uzura\input</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Uzura\sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="actor.cpp">
+      <Filter>Uzura\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Uzura\process\player</Filter>
+    </ClCompile>
+    <ClCompile Include="bullet.cpp">
+      <Filter>Uzura\process\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>Uzura\process\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter_compiler.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter_interpreter.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter_lex.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter_loader.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="GScripter\gscripter_util.cpp">
+      <Filter>Uzura\gscripter</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.cpp">
+      <Filter>Uzura\collision</Filter>
+    </ClCompile>
+    <ClCompile Include="effect.cpp">
+      <Filter>Uzura\effect</Filter>
+    </ClCompile>
+    <ClCompile Include="shell.cpp">
+      <Filter>Uzura\shell</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="uzura.h">
+      <Filter>Uzura</Filter>
+    </ClInclude>
+    <ClInclude Include="g_title.h">
+      <Filter>Uzura\sequence\title</Filter>
+    </ClInclude>
+    <ClInclude Include="g_main.h">
+      <Filter>Uzura\sequence\main</Filter>
+    </ClInclude>
+    <ClInclude Include="scripting.h">
+      <Filter>Uzura\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="stage.h">
+      <Filter>Uzura\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>Uzura\input</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Uzura\sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="actor.h">
+      <Filter>Uzura\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Uzura\process\player</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.h">
+      <Filter>Uzura\process\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Uzura\process\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_compiler.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_def.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_interpreter.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_lex.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_loader.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="GScripter\gscripter_util.h">
+      <Filter>Uzura\gscripter</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>Uzura\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="effect.h">
+      <Filter>Uzura\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="shell.h">
+      <Filter>Uzura\shell</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc" />
+  </ItemGroup>
+</Project>
